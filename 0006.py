@@ -5,3 +5,4 @@ def sum_square_difference(num):
 
 
 print(sum_square_difference(100))
+# Answer: 25164150
