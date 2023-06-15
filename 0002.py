@@ -4,16 +4,15 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 # find the sum of the even-valued terms.
-summ = 0
-num1 = 1
-num2 = 2
-temp = 0
-while num2 < 4000000:
-    print(num1, num2)
-    if not num2 % 2:
-        summ += num2
-    temp = num1 + num2
-    num1, num2 = num2, temp
+def even_fibonacci(number):
+    summ, num1, num2 = 0, 1, 2
+    while num2 < number:
+        if not num2 % 2:
+            summ += num2
+        num1, num2 = num2, num1 + num2
 
-print('sum = ', summ)
+    return summ
+
+
+print(even_fibonacci(4000000))
 # Answer: 4613732
